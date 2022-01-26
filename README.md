@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @awierzba
 - 👀 I’m interested in gaming
-- 🌱 I’m currently learning pyton
+- 🌱 I’m currently learning Java
 - 💞️ I’m looking to collaborate on fb, linkedin
 - 📫 How to reach me fb, linkedin
 
