@@ -1,0 +1,54 @@
+package Butelka;
+
+// pojemność - nie może być więcej wlane, niż jest pojemności
+class Butelka {
+    private double ileLitrow;
+    private double pojemnosc;
+    private double zapelnienie = pojemnosc - ileLitrow;
+    Butelka(double ileLitrow, double pojemnosc){
+        this.ileLitrow = ileLitrow;
+        this.pojemnosc = pojemnosc;
+        this.zapelnienie = zapelnienie;
+    }
+    double getIleLitrow(){
+        return ileLitrow;
+    }
+    double getPojemnosc(){
+        return pojemnosc;
+    }
+    void wlej(double ilosc){
+        if(ilosc < zapelnienie)
+            this.ileLitrow += ilosc;
+        else {
+            System.out.println("Za mała pojemność - nie można wlać");
+        }
+    }
+    boolean wylej(double ilosc){
+        if(ilosc < ileLitrow)
+            this.ileLitrow -= ilosc;
+        else
+            return false;
+        return true;
+    }
+    void przelej(double ilosc, Butelka gdziePrzelac){
+        if(this.wylej(ilosc)) {
+            gdziePrzelac.wlej(ilosc);
+        }
+        else
+            System.out.println("Error");
+    }
+    public static void main(String[] args) {
+        Butelka[] butelka = new Butelka[3];
+
+        butelka[0] = new Butelka(2,3);
+        butelka[1] = new Butelka(5,5);
+        butelka[2] = new Butelka(6,9);
+
+        butelka[2].wlej(5);
+
+        System.out.println("Zawartość: " + butelka[0].getIleLitrow() + ", Pojemność: " + butelka[0].getPojemnosc());
+        System.out.println("Zawartość: " + butelka[1].getIleLitrow() + ", Pojemność: " + butelka[1].getPojemnosc());
+        System.out.println("Zawartość: " + butelka[2].getIleLitrow() + ", Pojemność: " + butelka[2].getPojemnosc());
+
+    }
+}
