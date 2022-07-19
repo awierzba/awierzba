@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Artur</h1>
 <h3 align="center">A passionate self-taugh Java developer from Poland</h3>
 
-- 🌱 I’m currently learning **Spring Boot** and **Software testing using Postman, Selenium, Junit**
+- 🌱 I’m currently learning **Spring Boot** and **Software testing using Postman, Selenide, Junit**
 
 
 <h3 align="left">Languages and Tools:</h3>
